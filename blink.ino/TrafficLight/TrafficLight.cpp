@@ -19,7 +19,7 @@ void TrafficLight::transition() {
             break;
         case YELLOW_GREEN:
             red = false; yellow = true; green = true;
-            *delay = 2;
+            *delay = 1;
             break;
         case GREEN:
             red = false; yellow = false; green = true;
@@ -27,22 +27,22 @@ void TrafficLight::transition() {
             break;
         case YELLOW:
             red = false; yellow = true; green = false;
-            *delay = 5;
+            *delay = 4;
             break;
     }
     nextState();
 }
 
 int TrafficLight::nextState() { 
-    state = (state == FLASHING_YELLOW) ? RED : state + 1;
+    state = (state == FLASHING_GREEN) ? RED : state + 1;
     return state;
 }
 
 int TrafficLight::getDelay() { return delay; }
-
 bool  TrafficLight::getRed() { return red; }
 bool  TrafficLight::getYellow() { return yellow; }
 bool  TrafficLight::getGreen() { return green; }
+bool TrafficLight::isFlashingG() { return state == FLASHING_GREEN; }
 
 void TrafficLight::printState() {
     switch (state) {
@@ -58,13 +58,11 @@ void TrafficLight::printState() {
         case YELLOW:
             Serial.println("YELLOW");
             break;
-        case FLASHING_YELLOW:
-            Serial.println("FLASHING_YELLOW");
+        case FLASHING_GREEN:
+            Serial.println("FLASHING_GREEN");
             break;
         default:
             Serial.println("UNKNOWN");
             break;
     }
 }
-
-bool TrafficLight::isFlashingY() { return state == FLASHING_YELLOW; }

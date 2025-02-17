@@ -13,7 +13,7 @@ class TrafficLight {
         YELLOW_GREEN, // 1
         GREEN,  // 2
         YELLOW, // 3
-        FLASHING_YELLOW, // 4
+        FLASHING_GREEN, // 4
       };
     public:
       TrafficLight();
@@ -26,7 +26,7 @@ class TrafficLight {
       bool getGreen();
       int getState();
       void printState();
-      bool isFlashingY();
+      bool isFlashingG();
 
   };
 

@@ -19,11 +19,11 @@ void loop() {
   digitalWrite(YELLOW_PIN, light.getYellow());
   digitalWrite(GREEN_PIN, light.getGreen());
 
-  if (light.isFlashingY()) {
+  if (light.isFlashingG()) {
       for (int i = 0; i < 10; i++) {  // Flash 10 times
-            digitalWrite(YELLOW_PIN, HIGH);
+            digitalWrite(GREEN_PIN, HIGH);
             delay((light.getDelay()/10)*5);
-            digitalWrite(YELLOW_PIN, LOW);
+            digitalWrite(GREEN_PIN, LOW);
             delay((light.getDelay()/10)*5);
         }
   } else {
