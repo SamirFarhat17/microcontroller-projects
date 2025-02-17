@@ -1,8 +1,8 @@
 #include "TrafficLight.h"
 
-const int RED_PIN = 5;
+const int RED_PIN = 3;
 const int YELLOW_PIN = 4;
-const int GREEN_PIN = 3;
+const int GREEN_PIN = 5;
 TrafficLight light;  // Create an instance of TrafficLight (No new!)
 
 void setup() {
