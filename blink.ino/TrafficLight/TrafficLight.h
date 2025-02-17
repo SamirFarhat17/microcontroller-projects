@@ -6,7 +6,7 @@ class TrafficLight {
       bool red;
       bool yellow;
       bool green;
-      int* delay;  // 🔥 Now delay is dynamically allocated
+      int* delay;  // Now delay is dynamically allocated
       int state;
       enum STATE {
         RED,  // 0
