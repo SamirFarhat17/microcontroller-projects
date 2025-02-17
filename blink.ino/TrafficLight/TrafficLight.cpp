@@ -3,12 +3,12 @@
 
 // ✅ Constructor allocates memory for delay
 TrafficLight::TrafficLight() : red(true), yellow(false), green(false), state(STATE::RED) {
-    delay = new int(1000); // 🔥 Allocate delay dynamically
+    delay = new int(1000); // Allocate delay dynamically
 }
 
 // ✅ Destructor properly deletes dynamic memory
 TrafficLight::~TrafficLight() {
-    delete delay;  // 🔥 Free the allocated memory
+    delete delay;  // Free the allocated memory
 }
 
 void TrafficLight::transition() {
