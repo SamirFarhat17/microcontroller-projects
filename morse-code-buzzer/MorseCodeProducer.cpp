@@ -2,7 +2,7 @@
 #include <string.h>
 #include <Arduino.h>
 
-constexpr const char* dictTrans[26] = {
+const char* MorseCodeProducer::dictTrans[26] = {
     ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
     "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-",
     "..-", "...-", ".--", "-..-", "-.--", "--.."
