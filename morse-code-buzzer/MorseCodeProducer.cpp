@@ -1,6 +1,5 @@
 #include "MorseCodeProducer.h"
 #include <string.h>
-#include <Arduino.h>
 
 const char* MorseCodeProducer::dictTrans[26] = {
     ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
