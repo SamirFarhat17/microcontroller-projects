@@ -41,7 +41,7 @@ void loop() {
       if(pedestrian && light.getRed()) {
         Serial.println("PEDESTRIASN CROSSING");
         delay(light.getDelay() * 10);
-        pedestrian = ~pedestrian;
+        pedestrian = false;
       }
       delay(light.getDelay() * 5);  // Normal delay
   }
